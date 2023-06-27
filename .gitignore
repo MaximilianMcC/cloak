@@ -156,3 +156,9 @@ test1.*
 test2.*
 test3.*
 /test
+
+# scss/sass
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
