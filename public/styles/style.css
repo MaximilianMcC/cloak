@@ -37,6 +37,8 @@ main {
   display: grid;
   height: 100%;
   grid-template-columns: 1fr 5fr;
+  background-color: #061113;
+  background-image: url("../assets/images/topography.svg");
 }
 main .sidebar {
   display: flex;
