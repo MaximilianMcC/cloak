@@ -75,27 +75,35 @@ main .sidebar .bottom .buttons button.settings {
   aspect-ratio: 1/1;
 }
 main .content {
-  margin: 50px 300px 0px 300px;
-  background-color: greenyellow;
+  margin: 50px 15% 0px 15%;
 }
 
 .post {
-  background-color: blue;
+  background-color: #121C1E;
   padding: 30px;
   border-radius: 25px;
+  margin-bottom: 30px;
 }
 .post img {
   width: 100%;
   height: auto;
+  border-radius: 5px;
 }
 .post .divider {
   border-bottom: 1px solid #f1f1f1;
   margin: 10px 0px 10px 0px;
 }
-.post-options, .post-details button {
+.post-options {
   display: flex;
-  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.post-options button {
+  height: 60px;
+  padding: 0;
+  display: flex;
   justify-content: center;
   align-items: center;
+  display: inline-block;
   aspect-ratio: 1/1;
 }/*# sourceMappingURL=style.css.map */
