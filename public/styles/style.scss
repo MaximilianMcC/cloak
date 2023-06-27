@@ -1,16 +1,110 @@
+// Colors
+$primary-background: #061113;
+$secondary-background: #121C1E;
+$secondary: #133D49;
+$text: #f1f1f1;
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
+body, html {
+	height: 100%;
+	background-color: $primary-background;
+	font-size: 120%;
+}
+
 // Headings
 h1, h2, h3, h4, h5, h6, button, a {
 	font-family: 'Reem Kufi Fun', sans-serif;
+	color: $text;
 }
 
 // General text
 p, input {
 	font-family: 'Segoe UI', sans-serif;
 	font-weight: 500;
+	color: $text;
+}
+
+// Buttons
+button {
+	background-color: $secondary;
+	padding: 15px 30px;
+	font-size: 1.2rem;
+	border: none;
+	border-radius: 3px;
+
+	// When the button is hovered over
+	&:hover {
+		background-color: darken($secondary, 2%);
+		cursor: pointer;
+	}
+}
+
+
+
+// TODO: Don't use `main`. Put in a wrapper
+main {
+	display: grid;
+	height: 100%;
+	grid-template-columns: 1fr 5fr;
+
+	// Sidebar
+	.sidebar {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		justify-content: space-between;
+		background-color: $secondary-background;
+		padding: 20px;
+
+		// Divider line
+		.divider {
+			border-bottom: 1px solid $text;
+			margin: 10px 0px 10px 0px;
+		}
+
+		// The top section of the bar
+		.top {
+
+			.title {
+				font-size: 3rem;
+			}
+
+			// Buttons
+			button {
+				width: 100%;
+				margin: 5px 0px 5px 0px;
+			}
+		}
+
+		// The bottom section of the bar
+		.bottom {
+
+			.buttons {
+				
+				button {
+					padding: 15px;
+
+					&.settings {
+						margin-right: 20px;
+						height: 100%;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						aspect-ratio: 1/1;
+					}
+				}
+
+				display: grid;
+				grid-template-columns: 1fr 5fr;
+			}
+
+		}
+		
+	}
+
 }

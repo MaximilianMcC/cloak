@@ -4,11 +4,71 @@
   box-sizing: border-box;
 }
 
+body, html {
+  height: 100%;
+  background-color: #061113;
+  font-size: 120%;
+}
+
 h1, h2, h3, h4, h5, h6, button, a {
   font-family: "Reem Kufi Fun", sans-serif;
+  color: #f1f1f1;
 }
 
 p, input {
   font-family: "Segoe UI", sans-serif;
   font-weight: 500;
+  color: #f1f1f1;
+}
+
+button {
+  background-color: #133D49;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 3px;
+}
+button:hover {
+  background-color: #113641;
+  cursor: pointer;
+}
+
+main {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 5fr;
+}
+main .sidebar {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  background-color: #121C1E;
+  padding: 20px;
+}
+main .sidebar .divider {
+  border-bottom: 1px solid #f1f1f1;
+  margin: 10px 0px 10px 0px;
+}
+main .sidebar .top .title {
+  font-size: 3rem;
+}
+main .sidebar .top button {
+  width: 100%;
+  margin: 5px 0px 5px 0px;
+}
+main .sidebar .bottom .buttons {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+main .sidebar .bottom .buttons button {
+  padding: 15px;
+}
+main .sidebar .bottom .buttons button.settings {
+  margin-right: 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1/1;
 }/*# sourceMappingURL=style.css.map */
