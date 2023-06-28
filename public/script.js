@@ -6,7 +6,6 @@ function renderPost(post) {
 	// Parse the content section
 	let content = ``;
 	JSON.parse(post["content"]).forEach(element => {
-		console.log(element);
 
 		// Check for the content type
 		// TODO: use switch
@@ -14,13 +13,18 @@ function renderPost(post) {
 		else if (element["type"] === "image") content += `<img src="${element["content"]}" alt="${post["title"]}">`;
 		else if (element["type"] === "poll") {
 			
+			// Get the total amount of votes for all posts
+			let totalVotes = 0;
+			element["content"].forEach(pollOption => totalVotes += pollOption["votes"]);
+
 			// Create the poll HTML
 			let pollHtml = ``;
 			element["content"].forEach(pollOption => {
 				
 				// Turn the vote count into a percentage
-				const percentage = Math.floor((pollOption["votes"] / 100) * 100);
-
+				// If the total voes is 0 then just set it to 0 to stop sus divide by 0 error thing (impossible)
+				const percentage = totalVotes !== 0 ? Math.round((pollOption["votes"] / totalVotes) * 100) : 0;
+				
 				pollHtml += `
 				<button>
 					<div class="progress" style="width: ${percentage}%;"></div>
