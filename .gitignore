@@ -162,3 +162,6 @@ test3.*
 *.css.map
 *.sass.map
 *.scss.map
+
+# database
+*.sqlite
