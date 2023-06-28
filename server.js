@@ -31,9 +31,10 @@ app.post("/add-post", (request, response) => {
 
 	// Extract the data from the body
 	const title = body["title"];
-	const content = body["content"];
+	const content = JSON.stringify(body["content"]);
 	const upvotes = body["upvotes"];
 	const downvotes = body["downvotes"];
+	
 
 	// Add the data to the database
 	database.run(`INSERT INTO posts(title, content, upvotes, downvotes) VALUES (?, ?, ?, ?)`,
