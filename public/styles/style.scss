@@ -51,6 +51,7 @@ main {
 	display: grid;
 	height: 100%;
 	grid-template-columns: 1fr 5fr;
+	overflow-y: hidden;
 
 	// Topography background
 	background-color: $primary-background;
@@ -115,7 +116,13 @@ main {
 
 	// Actual content
 	.content {
-		margin: 50px 15% 0px 15%;
+		overflow: auto;
+		height: 100%;
+
+		// All of the posts and whatnot
+		.feed {
+			margin: 50px 15% 0px 15%;
+		}
 	}
 
 }
