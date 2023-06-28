@@ -149,6 +149,16 @@ main {
 		margin: 10px 0px 10px 0px;
 	}
 
+	// Polls
+	.poll {
+
+		button {
+			width: 100%;
+			margin-bottom: 20px;
+			text-align: left;
+		}
+	}
+
 	&-options {
 		display: flex;
 		align-items: center;
