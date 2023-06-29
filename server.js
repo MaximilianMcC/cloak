@@ -1,6 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const sqlite = require("sqlite3").verbose();
+const sqlite = require("sqlite3");
 const path = require("path");
 
 
@@ -43,11 +43,11 @@ app.post("/add-post", (request, response) => {
 			
 			// Check for errors
 			if (error) {
-				response.status(500).send("Error adding post.")
+				response.status(500).send("Error adding post.");
 				return;
 			}
 			
-			response.status(200).send("Post has been added.")
+			response.status(200).send("Post has been added.");
 		}
 	);
 });
