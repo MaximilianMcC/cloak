@@ -87,3 +87,6 @@ This is for creating polls that users can interact with. The `content` key takes
 
 ## Getting a post
 Posts can be fetched using the `GET /posts` endpoint. This will return an array of all posts currently in the database.
+
+## Parsing markdown
+You can run `parseMarkdown(markdown)` to get a parsed version of the markdown. It takes one argument thats an array of strings. Each item is a line. It will return a single string of the markdown converted to HTML
