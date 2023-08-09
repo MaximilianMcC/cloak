@@ -56,4 +56,9 @@ This is used to create a new post. Post details are to be sent in the body of th
 ```
 
 ### `GET /posts`
-This is used to get the 50 most recent posts from an epoch timestamp. The timestamp is provided as `time` in the http query. For example, `?time=1691579509`. The posts are returned as a JSON array.
+This is used to get the 50 most recent posts from an epoch timestamp. The timestamp is provided as `time` in the http query. You can also specify how many to get. The default is 50, and the max is 250. Examples below. If no time is supplied it will use the time of the request.
+```
+GET /posts
+GET /posts?time=1691579509
+GET /posts?time=1691579509&count=1
+```

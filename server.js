@@ -55,9 +55,12 @@ app.post("/create-post", async (request, response) => {
 app.get("/posts", async (request, response) => {
 	console.log("GET /posts");
 
+	// Parse the query data
+	let timestamp = Date.now();
+	if (request.query.time) timestamp = request.query.time;
+	let count = 50;
+	if (request.query.count) count = clamp(request.query.count, 1, 250);
 
-	// TODO: Make there a way to choose how many to return. 50 default
-	const count = 50;
 	let data;
 
 	try {
@@ -67,8 +70,7 @@ app.get("/posts", async (request, response) => {
 		// Get the most recent posts from the post creation date
 		//? `-1` is descending order
 		//? `$lte` is <=
-		const timestamp = parseInt(request.query.time);
-		const query = { creation: { $gte: timestamp } };
+		const query = { creation: { $lte: timestamp } };
 		const result = posts.find(query).sort({ creation: -1 }).limit(count);
 		data = await result.toArray();
 
@@ -89,3 +91,18 @@ app.get("/posts", async (request, response) => {
 app.listen(port, () => {
 	console.log(`Server listening on port ${port}\n- http://localhost:${port}\n`);
 });
+
+
+
+
+
+
+
+
+
+
+
+// clamp
+function clamp(value, min, max) {
+	return Math.max(min, Math.min(value, max));
+}
