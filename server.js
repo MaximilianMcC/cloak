@@ -16,14 +16,14 @@ app.use(bodyParser.json());
 const mongoUri = "mongodb://127.0.0.1:27017";
 const databaseName = "cloak";
 const mongoClient = new MongoClient(mongoUri);
+const database = mongoClient.db(databaseName);
 
 // Create a post, and add it to the database
 app.post("/create-post", async (request, response) => {
 	console.log("POST /create-post");
 
 	try {
-		// Connect to the database, and get the posts collection
-		const database = mongoClient.db(databaseName);
+		// Get the posts collection from the database
 		const posts = database.collection("posts");
 
 		// Create the new post to add to the database
@@ -46,10 +46,43 @@ app.post("/create-post", async (request, response) => {
 		return;
 	}
 
+	// Success
 	response.send("Created and added post.", 200);
 });
 
 
+// Get the 50 most recent posts from a epoch timestamp
+app.get("/posts", async (request, response) => {
+	console.log("GET /posts");
+
+
+	// TODO: Make there a way to choose how many to return. 50 default
+	const count = 50;
+	let data;
+
+	try {
+		// Get the posts collection from the database
+		const posts = database.collection("posts");
+
+		// Get the most recent posts from the post creation date
+		//? `-1` is descending order
+		//? `$lte` is <=
+		const timestamp = parseInt(request.query.time);
+		const query = { creation: { $gte: timestamp } };
+		const result = posts.find(query).sort({ creation: -1 }).limit(count);
+		data = await result.toArray();
+
+	} catch (error) {
+
+		// Error while using the database
+		console.error("Error while using database\n", error);
+		response.send(500);
+		return;
+	}
+
+	// Success
+	response.send(data, 200);
+});
 
 
 // Run/start the server

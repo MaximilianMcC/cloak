@@ -11,6 +11,7 @@ This is the main database structure. I will be using MongoDB to create the NoSQL
 | content   | string[]  | Post content. Filled with post objects. |
 | upvotes   | uint      | Number of upvotes (likes)               |
 | downvotes | uint      | Number of downvotes (dislikes)          |
+| creation  | uint      | Epoch timestamp of creation date         |
 ### Post objects:
 There are three main types of post objects: text, media, and interactive poll.
 
@@ -53,3 +54,6 @@ This is used to create a new post. Post details are to be sent in the body of th
 	]
 }
 ```
+
+### `GET /posts`
+This is used to get the 50 most recent posts from an epoch timestamp. The timestamp is provided as `time` in the http query. For example, `?time=1691579509`. The posts are returned as a JSON array.
