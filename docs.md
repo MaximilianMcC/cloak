@@ -11,7 +11,7 @@ This is the main database structure. I will be using MongoDB to create the NoSQL
 | content   | string[]  | Post content. Filled with post objects. |
 | upvotes   | uint      | Number of upvotes (likes)               |
 | downvotes | uint      | Number of downvotes (dislikes)          |
-#### Post objects:
+### Post objects:
 There are three main types of post objects: text, media, and interactive poll.
 
 **Normal text**
@@ -31,3 +31,25 @@ There are three main types of post objects: text, media, and interactive poll.
 |-------|-----------|-----------------------------------|
 | text  | string    | The text regarding the poll item. |
 | votes | uint      | How many votes the item has.      |
+
+## API Endpoints
+The API is used to control the data of the app. No key is required to use it.
+
+### `POST /create-post`
+This is used to create a new post. Post details are to be sent in the body of the request. The body should be supplied with `title` and `content`
+```json
+// Example request of a post that contains some text, and an image.
+{
+	"title": "My first post",
+	"content": [
+		{
+			"type": "text",
+			"content": "Hello, world! This is an example post\nLorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, dolorum?"
+		},
+		{
+			"type": "image",
+			"url": "https://picsum.photos/1024"
+		}
+	]
+}
+```
