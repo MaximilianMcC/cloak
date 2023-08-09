@@ -55,9 +55,12 @@ app.post("/create-post", async (request, response) => {
 app.get("/posts", async (request, response) => {
 	console.log("GET /posts");
 
-	// Parse the query data
+	// Get the timestamp from the query data
 	let timestamp = Date.now();
 	if (request.query.time) timestamp = request.query.time;
+	timestamp = parseInt(timestamp);
+
+	// Get the count from the query data and clamp it
 	let count = 50;
 	if (request.query.count) count = clamp(request.query.count, 1, 250);
 
