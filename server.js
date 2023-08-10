@@ -1,7 +1,7 @@
 // Imports and whatnot
 const express = require("express");
 const bodyParser = require("body-parser");
-const { MongoClient } = require("mongodb");
+const { MongoClient, ObjectId } = require("mongodb");
 const path = require("path");
 
 // Create the express server
@@ -88,6 +88,41 @@ app.get("/posts", async (request, response) => {
 	// Success
 	response.send(data, 200);
 });
+
+
+// Like a post
+app.post("/like", async (request, response) => {
+	console.log("POST /like");
+
+	const postId = new ObjectId(request.body.id);
+
+	try {
+		// Get the posts collection from the database
+		const posts = database.collection("posts");
+		const query = { _id: postId };
+
+		// Check for if the post exists
+		const postExists = await posts.findOne(query);
+		if (!postExists) {
+			console.error(`Post with an id of ${postId} not found.`);
+			response.send(`Post with an id of ${postId} not found.`, 404);
+			return;
+		}
+
+		// Increase the upvotes by one
+		await posts.updateOne(query, { $inc: { upvotes: 1 } });
+
+	} catch (error) {
+
+		// Error while using the database
+		console.error("Error while using database\n", error);
+		response.send(500);
+		return;
+	}
+
+	response.send("Liked post", 200);
+});
+
 
 
 // Run/start the server

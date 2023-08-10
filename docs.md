@@ -62,3 +62,11 @@ GET /posts
 GET /posts?time=1691579509
 GET /posts?time=1691579509&count=1
 ```
+
+### `POST /like`
+This is used to like a post. When its called, the posts upvotes will be increased by 1. The post is given in the body json payload as `id`, example:
+```json
+{
+	"id": "123456abcdefg"
+}
+```
