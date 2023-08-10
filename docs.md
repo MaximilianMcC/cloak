@@ -70,3 +70,11 @@ This is used to like a post. When its called, the posts upvotes will be increase
 	"id": "123456abcdefg"
 }
 ```
+
+### `POST /dislike`
+This is used to dislike a post. When its called, the posts upvotes will be decreased by 1. The post is given in the body json payload as `id`, example:
+```json
+{
+	"id": "123456abcdefg"
+}
+```
