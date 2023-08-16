@@ -32,7 +32,7 @@ p, input {
 	color: $text;
 }
 
-// Standard buttons
+// Standard button
 button {
 	background-color: $secondary;
 	padding: 12px 30px;
@@ -48,4 +48,60 @@ button {
 		cursor: pointer;
 		box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
 	}
+}
+
+
+// Modal
+.modal-wrapper {
+	// display: none;
+	visibility: visible;
+	position: fixed;
+	z-index: 999999;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+
+	background-color: rgba(99, 92, 126, 0.1);
+	backdrop-filter: blur(2px);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+
+	.modal {
+		position: relative;
+		width: 50%;
+		height: 50%;
+
+		box-shadow: 5px 5px 100px rgba(0, 0, 0, 0.1);
+
+		.controls {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			list-style-type: none;
+			text-align: right;
+
+			//TODO: Don't put this in here
+			padding: 10px;
+
+			// background-color: $primary-background;
+
+			li { display: inline-block; }
+		}
+	}
+
+	&.visible { visibility: visible; }
+}
+
+
+
+
+.content-box {
+	background-color: $secondary-background;
+	border-radius: 10px;
+	padding: 10px;
 }

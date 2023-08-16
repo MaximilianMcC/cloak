@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="title" content="Cloak - Anonymous social media">
+	<meta name="description" content="Cloak is an an anonymous social media platform. Share thoughts, passions, and more anonymously">
 
 	<!-- Stuff in the tab -->
 	<title>Cloak</title>
@@ -12,12 +14,14 @@
 	<link rel="stylesheet" href="./styles/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun:wght@700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun:wght@700&display=swap">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 	<!-- Scripts -->
 	<script src="./js/utils.js" defer></script>
+	<script src="./js/modal.js" defer></script>
 	<script src="./js/postHandler.js" defer></script>
+
 
 </head>
 <body>
@@ -28,5 +32,22 @@
 		<button id="createPost">CREATE POST</button>
 
 
+		<!-- Modal test -->
+		<div class="modal-wrapper" id="modal1">
+			<div class="modal content-box">
+				<h1>Modal test</h1>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus a perferendis commodi officiis suscipit rem in officia, explicabo minima iure eligendi eos illo aliquid recusandae vitae temporibus. In, debitis enim?</p>
+				<button>test 123</button>
+				<button>test 123</button>
+
+				<!-- Controls -->
+				<ul class="controls">
+					<li><button>Close</button></li>
+					<li><button>Close</button></li>
+					<li><button>Close</button></li>
+				</ul>
+			</div>
+		</div>
+		
 	</main>
 </body>
