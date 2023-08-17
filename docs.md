@@ -78,3 +78,34 @@ This is used to dislike a post. When its called, the posts upvotes will be decre
 	"id": "123456abcdefg"
 }
 ```
+
+
+
+# Using the sus ui library type thing
+## Creating a modal
+Below is a modal template:
+```html
+	<!-- Modal example -->
+	<div class="modal-wrapper visible" id="myFirstModal">
+		<div class="modal-background">
+
+			<div class="modal content-box">
+
+				<!-- All modal content and whatnot goes in here -->
+				<h1>Hello, world!</h1>
+				<p>Lorem ipsum dolor sit amet.</p>
+
+				<!-- Controls -->
+				<ul class="controls">
+					<li><button id="modalCloseButton">Close</button></li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+```
+You need to have a `button#modalCloseButton` or you can't close it.
+If you want a button to open it, add the `modalId` attribute to it, and make the value of it the id, **without** the #
+```html
+<button modalId="myFirstModal">Show modal</button>
+```
