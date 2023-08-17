@@ -1,5 +1,5 @@
-function toggleModal(modalQuerySelector) {
+function toggleModal(modalId) {
 
-	const modalElement = document.querySelector(modalQuerySelector);
-	modalElement.classList.Toggle("visible");
+	const modalElement = document.getElementById(modalId);
+	modalElement.classList.toggle("visible");
 }

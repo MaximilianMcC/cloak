@@ -53,48 +53,51 @@ button {
 
 // Modal
 .modal-wrapper {
-	// display: none;
-	visibility: visible;
-	position: fixed;
-	z-index: 999999;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
+	
+	// Show//hide the modal
+	display: none;
+	&.visible { display: block; }
 
-	background-color: rgba(99, 92, 126, 0.1);
-	backdrop-filter: blur(2px);
+	.modal-background {
+		position: fixed;
+		z-index: 999999;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
 
-	display: flex;
-	justify-content: center;
-	align-items: center;
+		background-color: rgba(99, 92, 126, 0.1);
+		backdrop-filter: blur(2px);
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
 
-	.modal {
-		position: relative;
-		width: 50%;
-		height: 50%;
+		.modal {
+			position: relative;
+			width: 50%;
+			height: 50%;
 
-		box-shadow: 5px 5px 100px rgba(0, 0, 0, 0.1);
+			box-shadow: 5px 5px 100px rgba(0, 0, 0, 0.1);
 
-		.controls {
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			list-style-type: none;
-			text-align: right;
+			.controls {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				list-style-type: none;
+				text-align: right;
 
-			//TODO: Don't put this in here
-			padding: 10px;
+				//TODO: Don't put this in here
+				padding: 10px;
 
-			// background-color: $primary-background;
+				// background-color: $primary-background;
 
-			li { display: inline-block; }
+				li { display: inline-block; }
+			}
 		}
 	}
-
-	&.visible { visibility: visible; }
 }
 
 

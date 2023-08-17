@@ -39,7 +39,12 @@ button:hover {
 }
 
 .modal-wrapper {
-  visibility: visible;
+  display: none;
+}
+.modal-wrapper.visible {
+  display: block;
+}
+.modal-wrapper .modal-background {
   position: fixed;
   z-index: 999999;
   top: 0;
@@ -53,13 +58,13 @@ button:hover {
   justify-content: center;
   align-items: center;
 }
-.modal-wrapper .modal {
+.modal-wrapper .modal-background .modal {
   position: relative;
   width: 50%;
   height: 50%;
   box-shadow: 5px 5px 100px rgba(0, 0, 0, 0.1);
 }
-.modal-wrapper .modal .controls {
+.modal-wrapper .modal-background .modal .controls {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -68,11 +73,8 @@ button:hover {
   text-align: right;
   padding: 10px;
 }
-.modal-wrapper .modal .controls li {
+.modal-wrapper .modal-background .modal .controls li {
   display: inline-block;
-}
-.modal-wrapper.visible {
-  visibility: visible;
 }
 
 .content-box {
