@@ -17,6 +17,7 @@ $text: #f1f1f1;
 html {
 	height: 100%;
 	font-size: 24px;
+	overflow-y: hidden;
 
 	body {
 		background-color: $primary-background;
@@ -28,12 +29,7 @@ html {
 
 main {
 	display: grid;
-	grid-template-columns: 1fr 5fr;
-
-	@media (max-width: 1000px) {
-		grid-template-columns: 2fr 5fr;
-		background-color: green;
-	}
+	grid-template-columns: 1fr 4fr;
 }
 
 
@@ -75,6 +71,28 @@ nav {
 	}
 }
 
+// Main content
+.main {
+	padding: 25px;
+
+	background-image: url("../assets/img/topography.svg");
+	background-color: $primary-background;
+
+	height: 100vh;
+	overflow-y: scroll;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Cloak logo text
@@ -95,11 +113,4 @@ button {
 
 	border: none;
 	border-radius: 3px;
-
-
-	// Single icon button (square)
-	i.fa-solid {
-		width: 1rem;
-		height: 1rem;
-	}
 }
