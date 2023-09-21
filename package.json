@@ -1,17 +1,15 @@
 {
   "name": "cloak",
   "version": "1.0.0",
-  "description": "anonymous social media platform",
-  "main": "server.js",
+  "description": "Cloak is an anonymous social media site designed for people to share their ideas, hobbies, and other stuff with people anonymously online. The social media is very bare bones, with an emphasis on solely sharing content.",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Maximilian McCarthy",
+  "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.20.2",
-    "express": "^4.18.2",
-    "mongodb": "^5.7.0"
+    "express": "^4.18.2"
   }
 }
