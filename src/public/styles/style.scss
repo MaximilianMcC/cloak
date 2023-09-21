@@ -1,9 +1,105 @@
+// Default website theme colors
+$primary-background: #061113;
+$secondary-background: #121C1E;
+$accent-primary: #133D49;
+$accent-secondary: #8BCADA;
+$text: #f1f1f1;
+
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+
+	font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-body, html {
+html {
 	height: 100%;
+	font-size: 24px;
+
+	body {
+		background-color: $primary-background;
+		color: $text;
+	}
+}
+
+
+
+main {
+	display: grid;
+	grid-template-columns: 1fr 5fr;
+
+	@media (max-width: 1000px) {
+		grid-template-columns: 2fr 5fr;
+		background-color: green;
+	}
+}
+
+
+
+// Menu navigation bar thing
+nav {
+
+	// Separator line
+	hr {
+		background-color: $accent-secondary;
+		height: 2px;
+		border: none;
+		margin: 6px 0px;
+	}
+
+	padding: 25px;
+	height: 100vh;
+	text-align: center;
+	background-color: $secondary-background;
+	display: flex;
+	flex-direction: column;
+
+	// Top logo section
+	.top {
+		// TODO: Don't hardcode this
+		font-size: 35px;
+	}
+
+	// Middle buttons section
+	.middle button {
+		width: 100%;
+		margin: 5px 0px;
+	}
+
+	// Bottom section
+	.bottom {
+		// TODO: Don't use margin
+		margin-top: auto;
+	}
+}
+
+
+
+// Cloak logo text
+.logo {
+	// TODO: Maybe use image instead of text
+	font-family: 'Reem Kufi', sans-serif;
+}
+
+// Generic button
+button {
+	background-color: $accent-primary;
+	color: $text;
+	padding: 10px 15px;
+
+	font-family: 'Reem Kufi', sans-serif;
+	text-transform: uppercase;
+	font-size: 1rem;
+
+	border: none;
+	border-radius: 3px;
+
+
+	// Single icon button (square)
+	i.fa-solid {
+		width: 1rem;
+		height: 1rem;
+	}
 }

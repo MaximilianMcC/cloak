@@ -2,8 +2,69 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
-body, html {
+html {
   height: 100%;
+  font-size: 24px;
+}
+html body {
+  background-color: #061113;
+  color: #f1f1f1;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+@media (max-width: 1000px) {
+  main {
+    grid-template-columns: 2fr 5fr;
+    background-color: green;
+  }
+}
+
+nav {
+  padding: 25px;
+  height: 100vh;
+  text-align: center;
+  background-color: #121C1E;
+  display: flex;
+  flex-direction: column;
+}
+nav hr {
+  background-color: #8BCADA;
+  height: 2px;
+  border: none;
+  margin: 6px 0px;
+}
+nav .top {
+  font-size: 35px;
+}
+nav .middle button {
+  width: 100%;
+  margin: 5px 0px;
+}
+nav .bottom {
+  margin-top: auto;
+}
+
+.logo {
+  font-family: "Reem Kufi", sans-serif;
+}
+
+button {
+  background-color: #133D49;
+  color: #f1f1f1;
+  padding: 10px 15px;
+  font-family: "Reem Kufi", sans-serif;
+  text-transform: uppercase;
+  font-size: 1rem;
+  border: none;
+  border-radius: 3px;
+}
+button i.fa-solid {
+  width: 1rem;
+  height: 1rem;
 }/*# sourceMappingURL=style.css.map */
