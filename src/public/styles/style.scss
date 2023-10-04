@@ -29,23 +29,15 @@ html {
 
 main {
 	display: grid;
-	grid-template-columns: 1fr 4fr;
+	grid-template-columns: 350px 4fr;
 }
 
 
 
 // Menu navigation bar thing
 nav {
-
-	// Separator line
-	hr {
-		background-color: $accent-secondary;
-		height: 2px;
-		border: none;
-		margin: 6px 0px;
-	}
-
 	padding: 25px;
+	width: 350px;
 	height: 100vh;
 	text-align: center;
 	background-color: $secondary-background;
@@ -54,7 +46,6 @@ nav {
 
 	// Top logo section
 	.top {
-		// TODO: Don't hardcode this
 		font-size: 35px;
 	}
 
@@ -68,6 +59,14 @@ nav {
 	.bottom {
 		// TODO: Don't use margin
 		margin-top: auto;
+	}
+
+	// Separator line
+	hr {
+		background-color: $accent-secondary;
+		height: 2px;
+		border: none;
+		margin: 6px 0px;
 	}
 }
 
@@ -113,4 +112,10 @@ button {
 
 	border: none;
 	border-radius: 3px;
+
+	// Hover effect
+	&:hover {
+		cursor: pointer;
+		background-color: darken($accent-primary, 2);
+	}
 }
