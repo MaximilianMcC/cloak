@@ -39,12 +39,6 @@ nav .middle button {
 nav .bottom {
   margin-top: auto;
 }
-nav hr {
-  background-color: #8BCADA;
-  height: 2px;
-  border: none;
-  margin: 6px 0px;
-}
 
 .main {
   padding: 25px;
@@ -52,6 +46,20 @@ nav hr {
   background-color: #061113;
   height: 100vh;
   overflow-y: scroll;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  background-color: #121C1E;
+  width: 70%;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+}
+
+.post .title {
+  font-size: 1.5rem;
 }
 
 .logo {
@@ -71,4 +79,11 @@ button {
 button:hover {
   cursor: pointer;
   background-color: #113641;
+}
+
+hr {
+  background-color: #8BCADA;
+  height: 2px;
+  border: none;
+  margin: 6px 0px;
 }/*# sourceMappingURL=style.css.map */

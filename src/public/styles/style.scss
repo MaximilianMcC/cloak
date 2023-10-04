@@ -60,33 +60,44 @@ nav {
 		// TODO: Don't use margin
 		margin-top: auto;
 	}
-
-	// Separator line
-	hr {
-		background-color: $accent-secondary;
-		height: 2px;
-		border: none;
-		margin: 6px 0px;
-	}
 }
 
 // Main content
 .main {
 	padding: 25px;
-
+	
 	background-image: url("../assets/img/topography.svg");
 	background-color: $primary-background;
 
+	// Make everything scroll
 	height: 100vh;
 	overflow-y: scroll;
+
+	display: grid;
+	place-items: center;
 }
 
 
 
 
 
+// Content block thing
+.container {
+	background-color: $secondary-background;
+
+	width: 70%;
+	padding: 25px;
+	margin-bottom: 25px;
+	border-radius: 10px;
+}
 
 
+// Post
+.post {
+
+	.title { font-size: 1.5rem; }
+
+}
 
 
 
@@ -118,4 +129,13 @@ button {
 		cursor: pointer;
 		background-color: darken($accent-primary, 2);
 	}
+}
+
+
+// Separator line thing
+hr {
+	background-color: $accent-secondary;
+	height: 2px;
+	border: none;
+	margin: 6px 0px;
 }
