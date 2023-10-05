@@ -52,7 +52,7 @@ nav .bottom {
 
 .container {
   background-color: #121C1E;
-  width: 70%;
+  width: 60%;
   padding: 25px;
   margin-bottom: 25px;
   border-radius: 10px;
@@ -60,6 +60,16 @@ nav .bottom {
 
 .post .title {
   font-size: 1.5rem;
+}
+.post .file-content {
+  text-align: center;
+}
+.post .file-content img {
+  max-width: 100%;
+  min-width: 20vw;
+  max-height: 50vh;
+  padding: 10px;
+  border-radius: 20px;
 }
 
 .logo {

@@ -85,7 +85,7 @@ nav {
 .container {
 	background-color: $secondary-background;
 
-	width: 70%;
+	width: 60%;
 	padding: 25px;
 	margin-bottom: 25px;
 	border-radius: 10px;
@@ -96,6 +96,20 @@ nav {
 .post {
 
 	.title { font-size: 1.5rem; }
+
+	.file-content
+	{
+		text-align: center;
+
+		img {
+			// TODO: Don't use vw and vh
+			max-width: 100%;
+			min-width: 20vw;
+			max-height: 50vh;
+			padding: 10px;
+			border-radius: 20px;
+		}
+	}
 
 }
 
