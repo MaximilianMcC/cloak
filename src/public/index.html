@@ -17,8 +17,9 @@
 
 	<!-- JavaScript -->
 	<script src="./scripts/utils.js" defer></script>
-	<script src="./scripts/postRenderer.js"></script>
-	<script src="./scripts/script.js"></script>
+	<script src="./scripts/postRenderer.js" defer></script>
+	<script src="./scripts/createPost.js" defer></script>
+	<script src="./scripts/script.js" defer></script>
 
 </head>
 <body>
@@ -59,8 +60,13 @@
 				<input id="title" type="text" placeholder="Post title...">
 
 				<!-- Text content input -->
-				<textarea id="content" placeholder="Share your thoughts..." characterCount="0/256"></textarea>
+				<!-- TODO: Fix character counter -->
+				<textarea id="textContent" placeholder="Share your thoughts..." characterCount="0/256"></textarea>
 
+				<!-- TODO: URL input just normal text  -->
+
+				<!-- Create post/submit button -->
+				<button id="submitPostButton">Create</button>
 			</div>
 
 			<!-- ! Content is added in JS -->  

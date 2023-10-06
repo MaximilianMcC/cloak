@@ -1,5 +1,6 @@
 // Render a post
 function renderPost(post) {
+	console.log("Rendering post");
 
 	// Parse the post JSON
 	postData = JSON.parse(post);

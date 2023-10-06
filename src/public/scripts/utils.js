@@ -1,5 +1,6 @@
 // HTTP post request
-async function post(url, data) {
+async function httpPost(url, data) {
+	console.log("Sending POST request");
 
 	const response = await fetch(url, {
 		method: "POST",
@@ -11,7 +12,8 @@ async function post(url, data) {
 }
 
 // HTTP get request
-async function get(url) {
+async function httpGet(url) {
+	console.log("Sending GET request");
 
 	const response = await fetch(url);
 	return response.json()

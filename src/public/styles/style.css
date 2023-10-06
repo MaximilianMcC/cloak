@@ -100,19 +100,13 @@ nav .bottom {
   font-size: 2rem;
   font-weight: bold;
 }
-.create-post #content {
+.create-post #textContent {
   position: relative;
   font-size: 1rem;
   resize: vertical;
   overflow: hidden;
   min-height: 200px;
   max-height: 50vh;
-}
-.create-post #content::after {
-  content: attr(characterCount);
-  position: absolute;
-  bottom: 10px;
-  top: 10px;
 }
 
 .logo {

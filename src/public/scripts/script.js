@@ -1,44 +1,26 @@
-//! this is all testing btw
-document.addEventListener("DOMContentLoaded", () => {
-	const post = JSON.stringify({
 
-		title: "Test 123 fr",
-		date: Date.now(),
-		content: [
-			{
-				type: "text",
-				content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, quod tempora officia dignissimos totam error numquam quasi aspernatur nisi atque nemo laborum iusto voluptates officiis. Vero ex modi cum culpa?"
-			},
-			{
-				type: "image",
-				content: "https://cdn.pixabay.com/photo/2014/06/03/19/38/road-sign-361514_960_720.png"
-			},
-			{
-				type: "text",
-				content: "yea buddy🥱🥱🥱"
-			}
-		]
-	});
+// Make the create post button make a new post
+document.querySelector("#createPostButton").addEventListener("click", () => {
 
-	//! this isn't testing but still
-	document.querySelector(".main").innerHTML += renderPost(post);
+	// Scroll up to the create post container
+	// TODO: Show in modal
+	document.querySelector("#createPost").scrollIntoView({ behavior: "smooth" });
+});
 
 
-
+// Update the character count for the content input
+// TODO: Fix character counter
+const contentInput = document.querySelector("textarea#textContent");
+let previousInput = "";
+contentInput.addEventListener("input", () => {
 	
-	// Make the create post button make a new post
-	document.querySelector("#createPostButton").addEventListener("click", () => {
+	// Get how many characters there are
+	const characters = contentInput.value.length;
+	// contentInput.setAttribute("characterCount", `${characters}/256`);
 
-		// Scroll up to the create post container
-		// TODO: Show in modal
-		document.querySelector("#createPost").scrollIntoView({ behavior: "smooth" });
-	});
+	// Check for if there are over 256 characters and prevent default
+	if (characters >= 256) contentInput.value = previousInput;
 
-
-	// Update the character count for the content input
-	const contentInput = document.querySelector("textarea#content");
-	contentInput.addEventListener("input", () => {
-		contentInput.setAttribute("characterCount", `${contentInput.value.length}/256`);
-		console.log(`${contentInput.value.length}/256`);
-	});
+	// Assign the last previous
+	previousInput = contentInput.value;
 });
