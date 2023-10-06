@@ -87,6 +87,34 @@ nav .bottom {
   align-items: center;
 }
 
+.create-post input, .create-post textarea {
+  background-color: #133D49;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 12px;
+}
+.create-post #title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.create-post #content {
+  position: relative;
+  font-size: 1rem;
+  resize: vertical;
+  overflow: hidden;
+  min-height: 200px;
+  max-height: 50vh;
+}
+.create-post #content::after {
+  content: attr(characterCount);
+  position: absolute;
+  bottom: 10px;
+  top: 10px;
+}
+
 .logo {
   font-family: "Reem Kufi", sans-serif;
 }

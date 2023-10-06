@@ -36,7 +36,7 @@
 			<!-- Middle area with buttons and stuff -->
 			<div class="middle">
 				<hr>
-				<button>Create Post</button>
+				<button id="createPostButton">Create Post</button>
 				<hr>
 				<button>New Posts</button>
 				<button>Popular Posts</button>
@@ -53,6 +53,17 @@
 		<!-- Main website content -->
 		<section class="main">
 
+			<div class="container create-post" id="createPost">
+				
+				<!-- Title input -->
+				<input id="title" type="text" placeholder="Post title...">
+
+				<!-- Text content input -->
+				<textarea id="content" placeholder="Share your thoughts..." characterCount="0/256"></textarea>
+
+			</div>
+
+			<!-- ! Content is added in JS -->  
 		</section>
 	
 	</main>

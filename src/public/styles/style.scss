@@ -134,6 +134,45 @@ nav {
 	}
 }
 
+.create-post {
+
+	input, textarea {
+		background-color: $accent-primary;
+		color: white;
+
+		border: none;
+		padding: 10px;
+		border-radius: 10px;
+		width: 100%;
+		margin-bottom: 12px;
+	}
+
+	#title {
+		font-size: 2rem;
+		font-weight: bold;
+	}
+
+	#content {
+		position: relative;
+
+		font-size: 1rem;
+		resize: vertical;
+		overflow: hidden;
+		
+		min-height: 200px;
+		max-height: 50vh;
+
+		// Word count thing
+		&::after {
+			content: attr(characterCount);
+			position: absolute;
+			bottom: 10px;
+			top: 10px;
+			// color: $accent-secondary;
+			// font-size: 0.5rem;
+		}
+	}
+}
 
 
 
