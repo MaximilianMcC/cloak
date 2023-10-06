@@ -58,8 +58,16 @@ nav .bottom {
   border-radius: 10px;
 }
 
-.post .title {
-  font-size: 1.5rem;
+.post .title-content, .post .text-content, .post .file-content {
+  padding-bottom: 15px;
+}
+.post .title-content h1 {
+  font-size: 2rem;
+}
+.post .title-content h2 {
+  font-size: 0.5rem;
+  color: gray;
+  text-transform: uppercase;
 }
 .post .file-content {
   text-align: center;
@@ -70,6 +78,13 @@ nav .bottom {
   max-height: 50vh;
   padding: 10px;
   border-radius: 20px;
+}
+.post .footer {
+  padding-top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {

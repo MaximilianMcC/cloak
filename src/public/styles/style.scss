@@ -94,8 +94,20 @@ nav {
 
 // Post
 .post {
+	
+	// TODO: Rename to content-file and content-text then use &-text, &-content
+	.title-content, .text-content, .file-content {
+		padding-bottom: 15px;
+	}
 
-	.title { font-size: 1.5rem; }
+	.title-content {
+		h1 { font-size: 2rem; }
+		h2 {
+			font-size: 0.5rem;
+			color: gray;
+			text-transform: uppercase;
+		}
+	}
 
 	.file-content
 	{
@@ -106,11 +118,20 @@ nav {
 			max-width: 100%;
 			min-width: 20vw;
 			max-height: 50vh;
+
 			padding: 10px;
 			border-radius: 20px;
 		}
 	}
 
+	.footer {
+		padding-top: 5px;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
 }
 
 
