@@ -94,7 +94,8 @@ nav {
 
 // Post
 .post {
-	
+	width: 100%;
+
 	// TODO: Rename to content-file and content-text then use &-text, &-content
 	.title-content, .text-content, .file-content {
 		padding-bottom: 15px;

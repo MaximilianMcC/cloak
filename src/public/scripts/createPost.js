@@ -18,7 +18,7 @@ document.querySelector("#submitPostButton").addEventListener("click", async () =
 	}
 
 	// Add all of the content
-	// TODO: Make dynamic for more content types and whatnot
+	// TODO: Make dynamic for more content types and whatnot when do scrum v2
 	let content = [
 		{
 			type: "text",
@@ -36,6 +36,9 @@ document.querySelector("#submitPostButton").addEventListener("click", async () =
 	// Send it to the server
 	await httpPost("./create-post", post);
 
+	// Clear the input form so that the user can create another post
+	document.querySelector("#title").value = "";
+	document.querySelector("#textContent").value = "";
+
 	// Render the post for the client
-	// document.querySelector("main").innerHTML += renderPost(JSON.stringify(post));
 });

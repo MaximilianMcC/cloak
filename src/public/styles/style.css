@@ -58,6 +58,9 @@ nav .bottom {
   border-radius: 10px;
 }
 
+.post {
+  width: 100%;
+}
 .post .title-content, .post .text-content, .post .file-content {
   padding-bottom: 15px;
 }

@@ -1,4 +1,6 @@
 
+
+
 // Make the create post button make a new post
 document.querySelector("#createPostButton").addEventListener("click", () => {
 

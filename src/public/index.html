@@ -19,6 +19,7 @@
 	<script src="./scripts/utils.js" defer></script>
 	<script src="./scripts/postRenderer.js" defer></script>
 	<script src="./scripts/createPost.js" defer></script>
+	<script src="./scripts/contentHandler.js" defer></script>
 	<script src="./scripts/script.js" defer></script>
 
 </head>
@@ -39,7 +40,7 @@
 				<hr>
 				<button id="createPostButton">Create Post</button>
 				<hr>
-				<button>New Posts</button>
+				<button id="newPostsButton">New Posts</button>
 				<button>Popular Posts</button>
 				<hr>
 			</div>
@@ -69,7 +70,10 @@
 				<button id="submitPostButton">Create</button>
 			</div>
 
-			<!-- ! Content is added in JS -->  
+			<div class="posts">
+				<!-- ! Content is added in JS -->  
+			</div>
+
 		</section>
 	
 	</main>

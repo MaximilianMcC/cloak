@@ -68,7 +68,6 @@ app.get("/posts", async (request, response) => {
 
 		// Get the timestamp of posts to get from
 		const timestamp = Date.now();
-		console.log(timestamp);
 
 		// Query the database for all posts where the date is <= the current time
 		//? $-1 is descending order

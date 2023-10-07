@@ -2,12 +2,9 @@
 function renderPost(post) {
 	console.log("Rendering post");
 
-	// Parse the post JSON
-	postData = JSON.parse(post);
-
 	// Get the title and creation date
-	const title = postData["title"];
-	const date = new Date(postData["date"]).toLocaleString("en-nz", {
+	const title = post["title"];
+	const date = new Date(post["date"]).toLocaleString("en-nz", {
 		weekday: "long",
 		day: "numeric",
 		month: "long",
@@ -19,7 +16,7 @@ function renderPost(post) {
 
 	// Get all of the content
 	let postContent = [];
-	postData["content"].forEach(content => {
+	post["content"].forEach(content => {
 		
 		// Check for what the content type is
 		switch (content["type"]) {
