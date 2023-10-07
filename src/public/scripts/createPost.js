@@ -34,7 +34,7 @@ document.querySelector("#submitPostButton").addEventListener("click", async () =
 	};
 
 	// Send it to the server
-	// await httpPost("./create-post", post);
+	await httpPost("./create-post", post);
 
 	// Render the post for the client
 	// document.querySelector("main").innerHTML += renderPost(JSON.stringify(post));
