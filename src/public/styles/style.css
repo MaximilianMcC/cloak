@@ -58,9 +58,14 @@ nav .bottom {
   border-radius: 10px;
 }
 
-.post {
+.posts {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
+
 .post .title-content, .post .text-content, .post .file-content {
   padding-bottom: 15px;
 }
