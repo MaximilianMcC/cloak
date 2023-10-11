@@ -10,8 +10,8 @@ document.querySelector("#submitPostButton").addEventListener("click", async () =
 	const date = Date.now();
 
 	// Check for if the user actually entered something
-	if (title.length == 0 || textContent.length == 0) 
-	{
+	if (title.length == 0 || textContent.length == 0) {
+		
 		// TODO: Make nice looking modal notification thing
 		alert("Add a title and content please");
 		return;

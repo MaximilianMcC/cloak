@@ -31,7 +31,6 @@ function renderPost(post) {
 
 	});
 
-
 	// Create the HTML
 	return `
 	<div class="container post">
