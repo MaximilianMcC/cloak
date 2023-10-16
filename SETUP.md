@@ -1,5 +1,5 @@
 # Setup Instructions
-This short guild will bring you through the process of getting Cloak to run on your computer.
+This short guild will bring you through the process of getting Cloak to run on your computer. At the bottom of the page I have also attached video evidence of it working for if you do not wish to run it.
 
 ## **Install needed programs**
 Cloak uses *NodeJS* to run its backend, and *MongoDB* for its database. Please download, and install both of them below:
@@ -25,3 +25,6 @@ Connect via "http://localhost:3000"
 
 ```
 To visit the website, go to [http://localhost:3000](http://localhost:3000), or [http://127.0.0.1:3000](http://127.0.0.1:3000). The terminal must be open to have the server running. **If you close it the website won't work**. When you are ready to stop the server, either pres `ctrl+c` *(same as copy/paste)*, or close the terminal window.
+
+# Video Example
+[Video of me using the site](https://i.imgur.com/nPD65Zz.mp4)
