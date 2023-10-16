@@ -40,5 +40,7 @@ document.querySelector("#submitPostButton").addEventListener("click", async () =
 	document.querySelector("#title").value = "";
 	document.querySelector("#textContent").value = "";
 
-	// Render the post for the client
+	// Refresh all of the posts
+	document.querySelector(".posts").innerHTML = "";
+	getPosts();
 });
